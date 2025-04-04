@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Worth Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Page Title -->
+        <h1 class="page-title" style="font-size: 2.5em; color: #ff7043;">Comparing the Networth of Politicians to Average Voter</h1>
+        
+        <!-- Bottom Cards Container -->
+        <div class="bottom-cards">
+            <!-- Left Column: Politician Selection -->
+            <div class="left-column">
+                <div class="card left-card">
+                    <h2>Select Politician</h2>
+                    <div id="politician-buttons">
+                        <button class="politician-btn" onclick="selectPolitician('DK Shivakumar')">DK Shivakumar (INC), Karnataka</button>
+                        <button class="politician-btn" onclick="selectPolitician('KH Puttaswamy Gowda')">KH Puttaswamy Gowda (IND), Karnataka</button>
+                        <button class="politician-btn" onclick="selectPolitician('Priyakrishna')">Priyakrishna (INC), Karnataka</button>
+                        <button class="politician-btn" onclick="selectPolitician('N Chandrababu Naidu')">N Chandrababu Naidu (TDP), Andhra Pradesh</button>
+                        <button class="politician-btn" onclick="selectPolitician('Jayantibhai Somabhai Patel')">Jayantibhai Somabhai Patel (BJP), Gujarat</button>
+                        <button class="politician-btn" onclick="selectPolitician('Suresha BS')">Suresha BS (INC), Karnataka</button>
+                        <button class="politician-btn" onclick="selectPolitician('YS Jagan Mohan Reddy')">YS Jagan Mohan Reddy (YSRCP), Andhra Pradesh</button>
+                        <button class="politician-btn" onclick="selectPolitician('Parag Shah')">Parag Shah (BJP), Maharashtra</button>
+                        <button class="politician-btn" onclick="selectPolitician('T.S. Baba')">T.S. Baba (INC), Chhattisgarh</button>
+                        <button class="politician-btn" onclick="selectPolitician('Mangalprabhat Lodha')">Mangalprabhat Lodha (BJP), Maharashtra</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Metaphorical Line -->
+            <div class="card right-card">
+                <div id="metaphorical-line">
+                    <!-- New line displaying the politician's net worth -->
+                    <h3 id="politician-net-worth"></h3>   
+                    <!-- New line to show lifetime earnings -->
+                    <h3 id="years-to-match">It would take you <strong>?</strong> years to match the net worth of <strong>DK Shivakumar</strong> at ₹<strong>100,000</strong> per month.</h2>
+                    <h4>(Average Indian works for only 38-40 years)</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card for User Input: Salary Input Field -->
+        <div class="card input-card">
+            <h2>Enter your monthly Salary</h2>
+            <input type="number" id="salary" placeholder="₹ 1,00,000" value="100000">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

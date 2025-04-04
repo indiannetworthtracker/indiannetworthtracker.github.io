@@ -1,0 +1,162 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #121212, #1f1f1f); /* Dark gradient */
+    color: #fff;
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Container for all cards */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px; /* Optional, for a wider layout */
+    align-items: center; /* Center everything horizontally */
+}
+
+/* Bar Graph Card */
+.graph-card {
+    width: 100%;
+    height: 300px; /* Adjust height for the graph */
+}
+
+/* Bottom Cards Container */
+.bottom-cards {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Cards */
+.card {
+    background: #333;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+    color: #e0e0e0;
+    width: 100%; /* Full width within its container */
+    max-width: 600px; /* Limit the card width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure the content is spaced out */
+}
+
+/* Left card: Politician Selector Buttons */
+.left-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+/* Right card: Metaphorical Line & Net Worth Comparison */
+.right-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center; /* Center the content vertically */
+    max-width: 800px; /* Increase the max width as needed */
+}
+
+/* Make both middle cards have same height */
+.bottom-cards > .card {
+    flex: 1; /* Make both the middle cards flexible and equal in height */
+}
+
+/* Salary Input Card */
+.input-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;  /* Full width */
+    max-width: 600px; /* Same max-width as other cards */
+}
+
+/* Buttons for Politician Selection */
+#politician-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; /* Full width for buttons */
+}
+
+button.politician-btn {
+    padding: 10px;
+    font-size: 1.2em;
+    width: 100%;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+}
+
+button.politician-btn:hover {
+    background-color: #ff7043;
+}
+
+button.selected {
+    background-color: #ff7043;
+}
+
+/* Input Field Styling */
+input[type="number"] {
+    padding: 10px;
+    width: 80%;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    background-color: #444;
+    color: #fff;
+    outline: none;
+}
+
+/* Metaphorical Line */
+#metaphorical-line {
+    font-size: 1.5em;
+    color: #bbb;
+}
+
+#years-to-match {
+    font-weight: 700;
+    margin: 55px 0px 55px 0px;
+}
+
+/* Adjust for mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack the cards vertically on smaller screens */
+        gap: 20px; /* Space between cards */
+    }
+
+    .card {
+        max-width: 100%; /* Full width of the card container */
+    }
+
+    .bottom-cards {
+        flex-direction: column; /* Stack the bottom cards vertically on smaller screens */
+        gap: 20px; /* Space between stacked cards */
+    }
+}
